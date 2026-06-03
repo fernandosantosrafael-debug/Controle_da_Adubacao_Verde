@@ -1,1 +1,69 @@
-style.css
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Adubação Verde</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Controle de Adubação Verde</h1>
+            <p>Gerencie o plantio e a estimativa de biomassa da sua propriedade</p>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <h2>Novo Plantio</h2>
+                <form id="form-adubacao">
+                    <div class="form-group">
+                        <label for="cultura">Cultura (Adubo Verde):</label>
+                        <select id="cultura" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="Crotalária" data-prod="4.5">Crotalária (Foco em Nitrogênio/Nematoides)</option>
+                            <option value="Guandu" data-prod="6.0">Feijão Guandu (Raízes Profundas/Nitrogênio)</option>
+                            <option value="Milheto" data-prod="8.0">Milheto (Alta Biomassa/Reciclagem de Potássio)</option>
+                            <option value="Mucuna" data-prod="5.0">Mucuna Preta (Cobertura Rápida/Massa Verde)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area">Área Plantada (em Hectares - ha):</label>
+                        <input type="number" id="area" step="0.1" min="0.1" placeholder="Ex: 2.5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data-plantio">Data do Plantio:</label>
+                        <input type="date" id="data-plantio" required>
+                    </div>
+
+                    <button type="submit" class="btn-salvar">Registrar Plantio</button>
+                </form>
+            </section>
+
+            <section class="list-section">
+                <h2>Histórico de Cobertura</h2>
+                <div class="table-wrapper">
+                    <table id="tabela-registros">
+                        <thead>
+                            <tr>
+                                <th>Cultura</th>
+                                <th>Área (ha)</th>
+                                <th>Data de Plantio</th>
+                                <th>Biomassa Est. (Toneladas)*</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+                <p class="obs">*Estimativa baseada na média de produção de matéria seca por hectare.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
