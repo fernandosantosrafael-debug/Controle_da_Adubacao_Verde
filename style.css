@@ -147,3 +147,21 @@ th {
     color: #777;
     margin-top: 15px;
 }
+.btn-editar {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-editar:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Garante que os botões fiquem alinhados lado a lado na tabela */
+td {
+    white-space: nowrap;
+}
