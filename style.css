@@ -165,3 +165,29 @@ th {
 td {
     white-space: nowrap;
 }
+/* Estilo do painel de estatísticas totais */
+.estatisticas-container {
+    margin-top: 20px;
+    background-color: var(--background);
+    border: 1px solid var(--accent-color);
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.estatisticas-container h3 {
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.estatisticas-container p {
+    font-size: 1.1rem;
+    margin: 4px 0;
+}
+
+.estatisticas-container span {
+    font-weight: bold;
+    color: var(--primary-dark);
+}
